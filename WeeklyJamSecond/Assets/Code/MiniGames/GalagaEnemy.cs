@@ -12,7 +12,7 @@ public class GalagaEnemy : MonoBehaviour
     }
     public IEnumerator ShootCoolDown()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.6f);
         GameObject shootMicro = Instantiate(Shoot, gameObject.transform.position + new Vector3(0, -30, 0), Quaternion.identity);
         shootMicro.transform.parent = gameObject.transform;
         StartCoroutine(ShootCoolDown());

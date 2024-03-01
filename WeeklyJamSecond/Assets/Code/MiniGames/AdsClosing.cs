@@ -5,8 +5,10 @@ using UnityEngine;
 public class AdsClosing : MonoBehaviour
 {
     public GameObject FirstAds;
+    public GameObject SpinningPage;
     public void CloseAd()
     {
+        SpinningPage.SetActive(true);
         gameObject.SetActive(false);
     }
     public void Itch()
