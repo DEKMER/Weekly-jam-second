@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class SpawnBalls : MonoBehaviour
 {
     public GameObject objectToSpawn;
+    public GameObject carpParents;
     public GameObject xxl;
-    public int objectsToSpawn = 15;
-    public int objectsDestroyed = 0;
+    public int objectsToSpawn;
+    public int objectsDestroyed;
 
     void Start()
     {
@@ -29,8 +30,9 @@ public class SpawnBalls : MonoBehaviour
 
     void SpawnObject()
     {
-        Vector3 position = new Vector3(Random.Range(-600f, 600f), Random.Range(-325f, 325f), 0.0f);
+        Vector3 position = new Vector3(Random.Range(400, 1450), Random.Range(150, 700), 0.0f);
 
         GameObject objectInstance = Instantiate(objectToSpawn, position, Quaternion.identity);
+        objectInstance.transform.parent = carpParents.transform;
     }
 }

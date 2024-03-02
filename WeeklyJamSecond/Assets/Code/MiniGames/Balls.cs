@@ -5,13 +5,13 @@ using UnityEngine;
 public class Balls : MonoBehaviour
 {
     public SpawnBalls sb;
-
-    void OnMouseDown()
+    private void OnEnable()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            sb.objectsDestroyed++;
-            Destroy(gameObject);
-        }
+        sb = GameObject.FindWithTag("Balls").GetComponent<SpawnBalls>();
+    }
+    public void OnCarpDown()
+    {
+        sb.objectsDestroyed++;
+        Destroy(gameObject);
     }
 }

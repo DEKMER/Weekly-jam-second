@@ -27,6 +27,7 @@ public class AmogusCounts : MonoBehaviour
         }
         if (Count >= 10)
         {
+            gameObject.SetActive(false);
             NextPage.SetActive(true);
         }
     }

@@ -9,6 +9,7 @@ public class FishGame : MonoBehaviour
     public float NowPosition;
     public GameObject Fish;
     Vector3 FishPos;
+    public GameObject NextPage;
     private void Start()
     {
         FishPos = Fish.transform.position;
@@ -47,6 +48,7 @@ public class FishGame : MonoBehaviour
     {
         if (NowPosition > 320 + FixPos   && NowPosition < 480 + FixPos)
         {
+            NextPage.SetActive(true);
             gameObject.SetActive(false);
         }
     }
