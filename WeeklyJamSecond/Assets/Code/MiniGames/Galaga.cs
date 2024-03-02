@@ -1,9 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Galaga : MonoBehaviour
 {
+    public GameObject[] EnemigosAll;
     public int EnemigosCount;
     public int Health = 5;
     public GameObject Shoot;
@@ -30,6 +30,14 @@ public class Galaga : MonoBehaviour
             Cursor.visible = true;
             MiniGameNext.SetActive(true);
             MiniGame.SetActive(false);
+        }
+        if (Health <= 0)
+        {
+            for (int x = 0; x < EnemigosAll.Length - 1; x++)
+            {
+                EnemigosAll[x].SetActive(true);
+            }
+            Health = 5;
         }
     }
     public IEnumerator ShootCoolDown()

@@ -7,7 +7,7 @@ public class Dino : MonoBehaviour
     public int jumpForce = 10;
     public Rigidbody2D rb;
 
-    private bool isGrounded = false;
+    public bool isGrounded = false;
 
     void Update()
     {

@@ -15,15 +15,15 @@ public class FishGame : MonoBehaviour
         FishPos = Fish.transform.position;
         NowPosition = FishPos.x;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (State == 0)
         {
-            NowPosition += 2;
+            NowPosition += 16;
         }
         if (State == 1)
         {
-            NowPosition -= 2;
+            NowPosition -= 16;
         }
         if (NowPosition < 50 + FixPos)
         {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GalagaProjectile : MonoBehaviour
@@ -20,7 +18,7 @@ public class GalagaProjectile : MonoBehaviour
         if (gameObject.tag == "PP" && other.tag == "Enemy")
         {
             other.gameObject.GetComponent<GalagaEnemy>().EnemigosCountMinus();
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             Destroy(gameObject);
         }
         if (gameObject.tag == "EP" && other.tag == "Player")

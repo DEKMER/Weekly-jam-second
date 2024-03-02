@@ -10,8 +10,8 @@ public class DinoTraps : MonoBehaviour
     {
         if (other.CompareTag("Dinosaur"))
         {
-            runner.gameObject.transform.position = new Vector3(350, 124, 0);
-            dino.gameObject.transform.position = new Vector3(28, 140, 0);
+            runner.gameObject.transform.position = new Vector3(3000, 220, 0);
+            dino.gameObject.transform.position = new Vector3(970, 500, 0);
         }
     }
 }
